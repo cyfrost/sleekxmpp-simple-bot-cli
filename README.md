@@ -39,6 +39,10 @@ This example sends a message from bob to alice and then waits for a response tex
 
 ```
 
+### Screenshot
+
+![Imgur Image](https://i.imgur.com/jH6f9HA.png)
+
 ### Use-cases
 Top of my head:
 
