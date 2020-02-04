@@ -16,7 +16,7 @@ To get started:
 
 3. Make sure [pipenv is installed](https://pipenv.kennethreitz.org/en/latest/#install-pipenv-today)
 
-4. Run `pipenv install`
+4. Run `pipenv install` (this installs all the dependencies needed for the script to work --currently only one ---`sleekxmpp`)
 
 5. Run `pipenv run python sleekxmpp-cli.py --from-jid "user1@blabber.im" --password "somerandompassword" --to-jid "user2@blabber.im" --message "Hello from user1, sent via XMPP CLI script!" --verbose`
 
@@ -52,3 +52,4 @@ Top of my head:
 2. You could run a thread to send multiple messages and spawn multiple message listeners and actions, this example was deliberately kept simple for demonstration.
 3. Jabber (formerly XMPP) is an IM protocol used by people around the world with a solid history of stability, reliability, and federated network of servers. SleekXMPP works with Jabber, and the long-lived GTalk (?), so you'd need to sign-up with one of the free Jabber networks (Blabber.im for example) or even-better self-host an ejabberd/prosody instance on a cheap VPS.
 4. one of the drawbacks of the example script mentioned above is that, for every invocation it'd connect, auth, send message, await response, print response, disconnect, exit. If you'd like to avoid such a cycle, refer to #2.
+5. This entire example will work perfectly fine on arm64 devices as long as there's a shell environment available (Recommended: Termux).
