@@ -2,7 +2,7 @@
 
 This repo derives from the very simple [EchoBot](https://github.com/fritzy/SleekXMPP/blob/develop/examples/echo_client.py) from the SleekXMPP examples repository.
 
-The EchoBot script has been subtly modified to make it work in a simple-send-and-get script like. You'd supply all the necessary arguments while running this python script and it'd connect to the XMPP server, authenticate as `user1` with their supplied password, send a message `hello` to `user2`, wait indefinitely for a response, once received, prints the response from `user2` to the console, and then exits the program. See below for Usage and examples!
+The EchoBot script has been subtly modified to make it work in a simple-send-and-get script like. You'd supply all the necessary arguments while running this python script and it'd connect to the XMPP server, authenticate as `user1` with their supplied password, send a message `hello` to `user2`, wait indefinitely for a response (or not!), once received, prints the response from `user2` to the console, and then exits the program. See below for Usage and examples!
 
 ### Usage:
 
@@ -32,6 +32,7 @@ Usage:
 -t, --to-jid   - the destination Jabber ID to which you wish to send a message to (can be a XMPP Bot/Human/whatever).
 -m, --message  - the message you want to send as From-JID to To-JID.
 -v, --verbose  - enables Verbose logging about inbetweening. If this is disabled, no output except the actual response body will be printed to stdout.
+-n, --no-wait  - immediately exit after sending the message without waiting for any response stanzas.
 
 Example: pipenv run python sleekxmpp-cli.py -f "bob@blabber.im" -p "doncorleone" -t "alice@blabber.im" -m "hi from bob!"
 
